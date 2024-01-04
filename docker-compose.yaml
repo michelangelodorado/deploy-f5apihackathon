@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  vuln-app:
+    image: vuln-app
+    ports:
+      - "3000:3000"
+      - "80:80"
+    networks:
+      - mynetwork
+
+  currency-api:
+    image: currency-api
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
