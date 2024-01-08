@@ -2,7 +2,7 @@ version: '3'
 
 services:
   vuln-app:
-    image: vuln-app
+    image: michelangelodorado/vuln-app:latest
     ports:
       - "3000:3000"
       - "80:80"
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   currency-api:
-    image: currency-api
+    image: michelangelodorado/currency-api:latest
     ports:
       - "8080:8080"
     networks:
